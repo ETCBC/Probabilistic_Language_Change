@@ -1,0 +1,1250 @@
+Conj Pred Subj Objc
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Subj PreC
+Conj Subj PreC
+Subj PreC
+Conj Subj PreC
+Subj PreC
+Subj PreC
+Conj Subj PreC
+Rela Pred Cmpl
+Pred Subj Cmpl
+Subj
+Conj Subj PreC
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred Subj
+Conj Pred Adju Subj
+Rela PreC Objc Loca
+Conj Subj PreC
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Subj PreC
+Conj Subj PreC
+Conj Pred Subj
+Conj Pred Subj PreC
+PreC
+PreC
+PreC
+Subj PreC
+Conj Pred
+Subj PreC Cmpl
+Conj PreO
+Conj Pred Subj
+Conj Pred Cmpl Subj Objc
+Conj Pred Cmpl Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Pred Cmpl Objc
+Conj Subj Pred Objc
+Conj Pred PreC Subj
+Conj Pred Subj Objc Cmpl
+Subj PreC
+Conj Pred Cmpl Objc
+Conj Pred Subj
+Subj PreC
+Conj PreC
+Conj Pred Subj PreC
+Conj Subj PreC
+Subj PreC
+Conj Pred Subj PreC
+Conj Pred Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Pred Cmpl Objc
+Conj Subj PreC
+Conj Pred Subj
+Nega Subj
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Pred Subj
+Nega Subj
+Conj Subj PreC
+Subj Pred PreC
+Conj Nega Pred PreC Subj
+Conj Subj
+Conj PreC Subj
+Conj Subj PreC
+Conj Pred Subj Objc Cmpl Adju
+Conj Pred Cmpl Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj PreC
+Subj PreC
+Conj Subj PreC
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj PreC
+Subj Pred Objc
+Conj Pred Objc
+Conj Subj PreC
+Subj Pred PreC
+PreC
+PreC
+Conj Pred Subj PreC
+PreC
+Conj Subj PreC
+Cmpl Pred Subj
+Subj PreC
+Conj Subj PreC
+PreC Cmpl
+Subj PreC
+Rela PreC Cmpl
+Conj Pred Cmpl Time
+Conj Time Pred Cmpl
+Conj Pred Cmpl Subj Objc
+Subj PreC
+Conj Pred
+Subj PreC Adju
+Conj Subj Pred Objc Objc
+Pred
+Conj Pred Subj Cmpl
+Pred
+Conj Pred Subj
+Rela Pred
+Conj Pred Objc
+Conj Pred Cmpl
+Conj Cmpl
+Conj Cmpl
+Conj Cmpl
+Subj PreC
+Pred Subj
+Conj Subj PreC Adju
+Conj PreC
+Rela PreC Adju
+Subj PreC
+Conj PreO Cmpl
+Conj Pred Cmpl Adju
+Pred Objc Cmpl
+Conj Pred Objc
+Conj Subj PreC
+Conj Subj
+Rela PreC Cmpl Adju
+Conj Pred Subj
+Rela PreC Cmpl
+Time
+Conj Pred Objc
+Rela Pred Cmpl
+Conj PreO Time
+Conj Pred Adju
+Conj Subj PreC
+Conj Pred Objc
+Conj Pred Cmpl Time
+Conj Pred Cmpl
+Conj Pred Cmpl Loca
+Conj Pred Cmpl
+Conj Pred Objc Cmpl
+Conj Pred Cmpl
+Conj Pred Cmpl Subj
+Rela PreC
+Conj Cmpl Pred Adju
+Conj Pred Cmpl
+Conj Pred Cmpl
+Conj Pred Objc
+Conj Subj Pred
+Conj PreC Subj
+Conj Pred Adju Cmpl
+Conj Pred Cmpl
+Conj Pred Cmpl
+Rela Pred Subj Adju
+Conj Pred Subj Objc
+Conj PreO Adju
+Conj PreO Cmpl Time
+Conj Pred PreC Cmpl Adju
+Pred Subj Objc Loca
+Conj Pred Adju Cmpl
+Conj Pred Cmpl Objc
+Conj Objc Pred Cmpl
+Conj Cmpl Pred Objc
+Conj Objc
+Conj Objc
+Conj Adju Objc
+Subj PreC Adju
+Conj Cmpl Adju Adju Objc
+Rela PreC Cmpl
+Conj Cmpl Adju Loca Objc
+Cmpl Adju Adju Objc
+Conj Pred Subj Cmpl Objc
+Conj Pred Adju Adju Objc
+Conj Adju
+Conj Pred Subj PreC
+Conj Pred Cmpl Objc
+Conj Objc
+Conj Objc
+Conj Adju Objc Adju Cmpl
+Rela PreC
+Cmpl Adju Objc
+Conj Adju Objc
+Conj Objc
+Conj Adju Objc
+Conj Objc
+Conj Adju Objc
+Cmpl Cmpl Objc
+Rela PreC
+Conj Loca Adju Objc
+Conj Objc
+Conj Adju Objc
+Conj Objc
+Conj Pred PreC Subj
+Conj Pred Subj Objc
+Conj Pred Objc Objc
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Pred Subj PreC
+Conj Pred Subj Time
+Conj Pred Subj
+PreO
+Conj Pred Cmpl
+Conj Pred
+Conj Pred Objc
+Conj Pred Objc Objc
+Conj Adju Pred PreC
+Conj Subj PreC
+Conj Pred Objc
+Conj Subj PreC
+Conj Subj
+Conj Subj PreC
+Conj Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Conj Pred Subj PreC
+Subj
+Conj Subj
+Conj Subj
+Conj Subj PreC
+Subj PreC Adju
+Conj PreO Cmpl
+Subj PreO
+Conj Pred Objc
+Conj Subj Pred Loca
+PreS Objc
+Subj PreC
+Conj Pred Adju Objc
+Conj Objc
+Subj PreC
+PreC
+Conj Adju Pred Objc
+Conj Subj PreC
+Subj Pred Objc
+Conj PreC
+Subj PreC Adju
+Subj Pred Objc
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Conj PreC
+Subj PreC Adju
+PreC
+Subj Pred Cmpl
+Conj Cmpl Pred Subj
+Conj Subj PreC
+Conj Subj PreC
+Conj PreC
+Conj PreC
+Conj Subj Pred Objc
+Conj Subj Adju Pred Cmpl Adju
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj PreC
+Conj Subj Pred Objc
+Conj Subj PreC
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Conj Subj Pred Objc
+Subj PreC
+Subj PreC
+Subj PreC
+Conj PreC Subj
+Conj Subj PreC
+Subj
+Subj PreC
+Conj Subj PreC
+Conj Pred Subj PreC
+PreC Objc
+Conj PreC Objc Adju
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Objc
+Conj Pred Subj Cmpl
+Conj PreO
+Rela PreC Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Cmpl
+Conj Nega Pred Subj
+Conj Pred Modi
+Conj Pred Subj Objc
+Conj Pred Cmpl
+Conj Pred Subj
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj Pred
+Conj Pred Subj
+Conj Subj Modi Pred
+Conj Pred Subj
+Rela PreC
+Conj Pred
+Conj Conj Pred Subj
+Conj Pred Objc
+Conj Pred
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred Time
+Conj Pred Subj
+Pred Objc
+Conj Pred Objc
+PreC Loca
+Conj PreO
+Conj Pred Objc
+Conj Pred Cmpl Modi
+Pred Objc
+Conj Pred Objc Loca
+Conj Objc Pred Loca
+Conj Pred Subj Objc
+Rela Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Objc
+Conj PreO Cmpl
+Conj Pred Objc Loca Loca
+Conj Pred Time
+Conj Pred Subj Adju Adju
+Rela Pred Cmpl
+Rela Nega Pred
+Conj Modi Pred Cmpl
+Pred
+Conj Nega Pred Cmpl
+Conj PreO
+Conj Pred Objc Cmpl
+Conj Pred Subj Cmpl Cmpl
+Pred
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl Cmpl
+Conj Pred Cmpl Subj Objc Loca Adju
+Conj Pred Objc Cmpl Adju
+Conj Pred Subj Cmpl
+Subj PreC
+Conj Loca Subj PreC
+Conj Pred Subj Cmpl
+Conj Pred Subj Objc
+Subj PreC
+Conj Pred Subj
+Conj Pred Adju Subj
+Conj Pred PreC
+Conj Pred Subj Cmpl
+Adju Pred Cmpl Objc
+Conj Pred Objc Adju
+Conj Pred Subj Modi
+Conj Subj PreC
+Conj Subj PreC
+Rela PreC
+Rela PreC Adju Cmpl
+PreO Adju Cmpl
+Conj Subj PreC
+Rela PreC
+Subj PreC
+Subj Pred Objc Cmpl
+PreC Adju
+Conj PreC Subj
+Subj PreC
+Subj Pred PreC Loca
+Conj Subj Pred Loca Cmpl
+Conj Pred Subj
+PreC Objc
+Conj Subj Pred Cmpl
+Conj Pred Cmpl
+Conj PreO
+Conj Pred Objc
+Conj Pred Subj Objc
+Conj Pred Subj Cmpl Cmpl Cmpl
+Conj Subj PreC Cmpl
+Conj Subj Modi PreC
+Conj Subj Modi PreC
+Conj Pred Subj
+Conj Pred
+Conj Pred Subj Cmpl
+Conj Pred Objc Cmpl
+Rela PreC
+Conj Pred
+Conj Pred Cmpl
+Conj Nega Pred Subj
+PreO
+Conj Pred Objc Cmpl
+Conj Pred
+Conj Nega Pred
+PreO
+Objc Pred Subj
+Subj Pred PreC
+Conj Subj Pred Objc Cmpl
+Conj PreC Subj Adju
+Adju Cmpl PreC
+Conj Pred Cmpl PreC
+Conj Cmpl Nega Pred
+Subj Pred Objc
+Conj Subj Pred
+Conj Pred Objc Loca Time
+Conj Subj Pred Objc
+Conj PreC Subj Adju
+Conj Pred Cmpl Adju
+Conj Pred Objc Cmpl
+Conj PreO Adju
+Objc Pred Subj
+Conj PreC Subj
+Adju PreC Subj
+Conj Cmpl Nega Pred
+Conj PreO Subj Cmpl
+Conj Subj PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC
+PreC Objc
+PreC
+PreC
+PreC
+Conj PreC Subj
+PreC
+PreC
+PreC
+PreC
+PreC
+Conj Pred Objc Cmpl
+Conj Pred Subj Cmpl Cmpl
+Conj Pred Subj Cmpl
+Conj Pred
+Conj Pred Cmpl
+Conj Subj Pred Objc
+Conj PreO Subj
+Conj PreO Cmpl
+Conj Pred PreC
+Conj Pred PreC Adju Time
+PreC
+Conj PreC
+Conj Pred Cmpl Subj
+Conj Modi PreC Objc Adju
+Rela PreC Cmpl Loca
+Objc Adju
+Conj Subj PreC
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Pred Modi
+Conj Pred Subj Cmpl
+Conj Pred Subj Objc Cmpl
+Conj Pred Cmpl
+Pred Objc Cmpl
+Conj Pred Subj Cmpl
+Rela PreC
+Pred Cmpl Objc
+PreC Cmpl
+Rela Pred Subj
+Conj Pred Objc Cmpl Cmpl
+Conj Subj PreC Cmpl
+Conj Subj PreC Adju Adju
+Conj Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Objc
+Pred Objc
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj PreO
+Conj Pred Objc Cmpl
+Conj Pred Loca Adju
+Conj Pred Cmpl
+Conj Pred Subj Objc Cmpl
+Conj Pred Cmpl Objc Time
+Conj Pred Subj Objc Time
+Pred
+Conj Nega Pred Subj Objc Cmpl Cmpl
+Conj PreO Cmpl
+Conj Pred Subj Adju Cmpl Time
+Conj Pred Subj Objc
+Rela PreC
+Conj Pred Subj Objc Cmpl
+Conj Objc
+Pred Adju Objc
+Conj Pred Subj
+Conj PreO Subj Cmpl
+Conj Pred Cmpl Subj Adju
+Conj Pred Subj Modi Objc Loca
+Conj Pred Subj Modi Objc
+Conj Subj PreC
+Rela Pred PreC Loca
+Subj
+Conj Subj
+Conj Subj
+Conj Subj
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Pred Objc
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Subj Pred
+Conj Pred Cmpl
+Conj Pred Subj Cmpl
+Pred
+Conj Pred Cmpl Subj
+Conj Pred Cmpl
+Conj PreO Loca Subj
+Conj Pred Subj
+Adju Pred Objc Objc
+Conj Pred Loca Objc
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred Modi Subj
+Conj Pred Cmpl
+Conj Pred Modi Subj Cmpl
+Conj Pred Cmpl Subj
+Conj Pred Subj
+Conj PreO Subj
+Conj Pred Objc Loca
+Conj Pred Subj Cmpl
+Conj Subj Pred Objc Cmpl
+Conj Pred Cmpl Objc Loca
+Conj Pred Objc Cmpl
+Conj Pred Cmpl Objc
+Modi Pred Subj
+Conj Pred Subj Objc Cmpl
+Pred Objc Cmpl
+Rela Pred Cmpl
+Conj Pred Subj Objc
+Adju Subj PreC
+Conj Subj PreC
+Adju Subj PreC
+Conj Subj PreC
+Adju Subj PreC
+Conj Subj PreC
+Adju Subj PreC
+Conj Subj PreC
+Adju Subj PreC
+Conj Subj PreC
+Adju Subj PreC
+Conj Subj PreC
+Conj Pred Subj Cmpl
+Conj Pred Cmpl
+Conj Pred Subj
+Pred Objc
+Conj Pred Subj Objc Adju Adju
+Conj Pred Subj Adju
+Conj Pred Subj Cmpl
+Pred Objc
+Rela PreC Cmpl
+PreC
+Pred Adju Cmpl
+Conj Pred Subj Objc
+Conj Adju Objc
+Conj Adju Objc
+Conj Adju Objc
+Conj Objc Adju
+Pred
+Conj Objc Adju Adju
+Conj Objc Adju Adju
+Pred
+Conj Objc Adju
+Pred Adju
+Conj PreC Subj
+Conj Objc
+Conj Subj PreC Cmpl Adju
+Conj Subj PreC
+Conj Pred
+Subj
+Rela PreC
+Pred Objc Cmpl Adju
+Conj Pred
+Pred Subj Objc
+PreC Objc
+Conj Pred Objc
+Conj Subj PreC Cmpl
+Conj Subj
+Rela PreC Objc
+Conj Subj
+Conj PreC Subj
+Conj Subj PreC Objc Adju
+PreC Adju
+Conj Pred
+Subj Pred Cmpl
+Conj Subj Pred Cmpl
+Conj Pred Objc
+PreC
+Conj PreC
+Conj Pred Cmpl Adju
+Conj Pred Objc
+Conj Pred Objc Cmpl
+Rela Pred Adju Subj
+Conj Pred Objc Cmpl
+Conj Pred Subj
+Pred Objc
+Conj Pred Objc Cmpl
+Conj Pred Cmpl Adju
+Cmpl Objc
+Conj Pred Cmpl Objc Objc
+Conj Pred
+Conj Pred
+Conj Pred Cmpl
+Subj PreC
+Conj Subj PreC
+Subj PreC
+Conj Subj Cmpl PreC
+Conj Subj PreC Time Adju
+Time Time Pred Subj Adju
+Pred Cmpl Adju
+Conj PreO Adju Cmpl
+Adju Cmpl
+Pred
+PreS PreC Adju
+Conj PreC Cmpl
+Conj Pred Cmpl Cmpl
+Conj Cmpl Cmpl
+Nega Pred Cmpl
+PreO
+Conj Pred Cmpl Objc
+Conj Pred Subj
+Conj Pred Cmpl Cmpl
+Pred Cmpl Time Adju
+Conj Objc
+Conj Objc Cmpl
+Conj Objc Cmpl Loca
+Rela PreC
+Pred Objc Cmpl Cmpl Time
+Conj Cmpl
+Rela PreC Cmpl
+Rela Pred Cmpl
+Conj Adju Objc
+Rela PreC
+Rela Pred Cmpl
+Pred Cmpl
+Conj PreC Subj
+Conj Adju Objc
+Adju Cmpl
+Conj Adju
+Conj Objc Cmpl
+Conj Pred Subj
+Subj Cmpl
+Conj Pred Subj
+Pred Objc
+Conj Pred
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Time
+Conj Pred Subj PreC
+Pred
+Conj Pred PreC
+Rela Pred Cmpl
+Rela Pred
+Pred Objc
+Pred
+Conj Pred PreC Adju
+Rela Pred
+Conj Pred Objc Cmpl
+Conj Pred Adju Objc
+Rela PreC
+Conj Pred Objc Cmpl
+Conj PreO
+Conj Pred Cmpl
+Conj Pred Objc
+Conj Pred Cmpl
+Conj Pred
+Conj Pred Subj
+Pred Cmpl
+Conj Pred Objc Adju
+Conj Pred Objc
+Conj Pred Objc Time
+Conj PreO Cmpl Time
+Modi Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred
+Conj Pred Subj Adju
+Conj Pred Cmpl Adju
+Conj PreO Cmpl
+Conj Pred Objc Adju Cmpl Time
+Conj Subj Pred Cmpl PreC
+Conj Pred Cmpl Objc
+Conj Pred Time
+Conj Pred Subj Objc
+Conj PreO
+Conj Pred Objc Cmpl
+Conj Pred Objc
+Conj Pred Subj PreC Cmpl
+PreC Objc
+Conj Pred Loca Objc Loca
+PreS
+Pred Objc Cmpl
+Conj Pred Subj Cmpl Objc
+Conj Pred Subj Objc
+Conj Pred Cmpl Objc
+Conj Pred Subj
+Pred Cmpl
+Conj Pred Subj Cmpl Objc
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl PreC
+PreC Objc
+Conj Pred Subj Cmpl Adju
+Rela Pred
+Conj Pred Subj Objc
+Rela Pred PreC
+Conj PreO Cmpl
+Conj Cmpl Pred Subj Objc Modi
+Adju Pred Subj Objc
+Conj Pred Subj
+Conj Pred Subj Objc
+Conj Pred Objc Cmpl
+Pred Cmpl Cmpl
+Conj PreO
+Conj Pred Cmpl
+Conj PreO
+Conj PreC Pred Subj
+Conj Objc
+Objc Pred Subj Cmpl Adju
+Rela Pred Cmpl
+Conj Subj Pred Objc Loca Adju
+Conj Pred Cmpl Objc
+Conj Pred Subj PreC Cmpl
+Conj Pred Subj Objc Adju
+Rela Pred
+Conj Pred Subj Cmpl
+Conj Pred PreC Objc Cmpl
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC
+Conj Pred Time
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Subj Objc
+PreO Cmpl
+Conj Pred Subj Cmpl Cmpl
+PreO
+Conj Pred Subj Cmpl
+Conj Pred Subj Objc
+Conj PreO
+Conj Pred Objc Cmpl
+Conj PreO
+Conj Pred
+Conj Pred Cmpl Cmpl
+Conj Pred
+PreO
+Conj Pred Subj PreC Modi
+Conj Pred Subj
+Conj Pred Subj
+Conj Pred Adju
+Conj Pred Subj Objc
+Pred Adju Cmpl Objc
+Conj Pred Adju Objc
+Conj Pred
+Conj Pred Cmpl
+Conj Subj Pred Cmpl
+Conj Pred Cmpl
+Conj Pred Subj
+Conj Pred Objc
+Conj Pred Subj
+Conj Pred Objc Cmpl
+Conj Subj Adju PreC
+Rela Pred
+Conj Pred Subj
+Conj Pred Subj PreC Loca
+Conj Pred Cmpl
+Conj Pred
+Pred Objc
+Conj Objc Pred Cmpl
+Conj Pred
+Pred Objc
+Conj Pred
+Conj Pred Subj Cmpl Cmpl
+Rela PreC
+Conj Pred Cmpl
+Conj Subj Pred
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred Objc
+Conj Pred Objc
+Rela PreC
+Conj Subj PreC
+Conj Pred Cmpl
+Conj Pred Objc
+Conj Pred Objc
+Conj Pred Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Objc
+Pred Objc
+Conj Pred Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Adju Objc
+Conj Objc Pred
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred Cmpl
+Conj PreO
+Conj Nega Pred Subj
+Pred Objc Modi
+Conj Pred Time
+Pred Subj
+Conj Pred Subj Objc
+Conj Pred Objc
+Conj Pred
+Conj Pred Objc
+Conj Subj PreC Cmpl
+Conj Pred Subj Objc
+Conj PreO
+Conj Pred Subj Objc Cmpl
+Conj PreO Objc
+Conj PreC Subj
+Conj Pred Loca
+Conj Objc Pred Modi
+Conj Objc Pred
+Rela PreC
+Conj Pred Adju
+Conj Pred Subj Cmpl
+Conj Pred Time
+Conj Pred Subj Loca
+Time Pred Subj Objc
+Conj Pred
+Conj Pred Modi Subj
+Conj Pred Subj Objc
+Conj Subj PreC
+Conj Pred Modi Subj Loca
+Conj Pred Subj
+Conj Subj PreC
+PreC
+Conj Subj Pred Cmpl
+Conj Pred Objc
+Conj PreO Subj
+Subj Pred Cmpl Loca
+Conj Pred Adju
+Conj Pred Subj Cmpl
+Conj Pred Objc
+Pred Objc
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Conj Subj Pred Cmpl
+Conj Pred Subj
+Conj Pred Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Objc Cmpl
+Conj Pred Subj PreC
+PreC Objc
+Conj Subj PreC
+PreC Objc
+Conj Objc Nega Pred Adju
+Conj Pred Subj Objc
+Conj Pred Cmpl Adju
+Conj Pred Objc
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Pred
+Conj Pred Subj Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Objc Adju
+Conj Pred Adju Subj
+Conj Pred Subj Objc Cmpl
+PreO
+Conj Pred Subj
+Pred
+Conj Pred Cmpl
+Conj Pred Cmpl
+Conj Subj PreC Cmpl
+Conj Pred Subj Objc
+Conj Pred Objc
+PreC Cmpl
+PreC Cmpl
+Conj Pred Subj Cmpl
+PreC Cmpl
+Conj Pred Subj Cmpl
+Conj Subj Pred Cmpl
+Pred Cmpl
+Conj Pred Subj
+Pred Objc Cmpl Loca
+Conj Pred Subj Adju
+Rela Pred Cmpl
+Conj Pred Subj
+Conj Pred Objc
+Conj Subj PreC
+Conj Subj PreC Objc
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Objc
+Conj Pred Cmpl
+Conj Pred Cmpl
+Subj PreC
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl Adju Objc
+Conj Pred Modi Subj Objc Adju
+Conj Pred Objc
+Conj Pred Cmpl
+Conj PreO Adju
+Conj Pred Subj Cmpl
+Conj Pred Objc Cmpl
+Pred Subj
+Conj PreO Subj Loca
+Conj Pred Loca
+Conj Subj Time PreC
+Rela Pred Subj Loca
+Conj Nega Pred Subj
+Pred Cmpl
+Pred Objc
+Conj Pred Cmpl
+Conj Pred Subj
+Conj Pred Subj
+Pred Objc
+Rela PreC
+Conj Pred Objc
+Pred Objc
+Pred Objc
+Conj Objc Adju Adju Pred Subj
+Conj Objc Adju
+Conj Objc Adju
+Conj Pred Subj Objc Adju Cmpl
+Conj Pred Subj
+Conj Pred Subj Adju Time
+Conj Pred Cmpl
+Conj PreO
+Pred Objc Adju
+Conj Pred Subj Cmpl
+Conj Pred PreC Subj
+Pred
+Conj Pred Subj Cmpl
+Pred Cmpl
+Conj Pred Objc Cmpl
+Conj Pred Objc
+Conj Pred Objc Adju
+Conj Pred Subj PreC
+Subj PreC
+Pred Cmpl
+Conj Subj PreC
+Conj Subj PreC
+Conj Subj PreC Cmpl Adju
+Rela Pred
+Pred
+Conj PreO Subj Objc
+PreC Subj
+PreC Subj
+Subj PreC
+Subj PreC
+Conj PreC
+Subj PreC Adju
+Subj PreC
+Conj Subj PreC
+Subj PreC Adju
+Conj Pred Subj PreC
+Conj Subj PreC
+Conj Subj Nega Pred Objc
+Conj Pred Cmpl PreC
+Subj PreC Adju
+Subj PreC
+Conj Pred Subj
+PreS Objc Time
+Subj
+Pred Adju
+PreO
+Conj Pred Cmpl Time
+Subj Pred Cmpl
+Subj PreC
+Subj
+Subj PreC
+Conj Pred Subj
+Subj PreC
+Conj Nega Pred PreC Subj
+Conj Subj Pred Adju
+Subj
+Subj PreC
+Subj
+Subj PreC
+Subj PreC
+Subj PreC
+Conj Subj PreC
+Subj
+Subj PreC
+Conj Subj PreC
+Subj PreC
+Subj PreC
+Conj Pred Subj
+Conj Nega Pred PreC Subj
+Conj Subj
+Conj PreO Subj
+Subj PreC Adju
+Subj PreC Adju Adju
+PreC Objc Adju
+Conj Pred Subj
+Conj Pred Cmpl Time
+Conj Adju Subj PreC
+Conj Subj PreC Adju Adju
+Conj Adju
+Conj Adju
+Conj Pred Time
+Pred
+Conj Pred Cmpl
+Conj Modi Time
+Conj PreC
+Pred Objc Cmpl Adju Adju Time Adju
+Conj Pred Objc Adju
+Conj Pred Subj Adju
+Conj Subj Nega Pred PreC
+Conj Pred Subj
+Conj PreO Subj Cmpl Adju
+Conj Objc
+Conj Pred Subj
+PreC Cmpl Adju
+Conj PreO
+Adju Subj PreC
+Conj Adju PreC
+Conj PreO Adju
+Objc
+Conj Pred Subj PreC
+Conj PreO Subj Adju
+Subj PreC Adju
+Conj PreC Adju
+Conj Pred Subj Cmpl
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Cmpl Subj
+Subj PreC Adju
+Pred Cmpl Adju Adju
+Conj PreO Subj
+Conj Pred Subj Objc Adju Adju
+Subj Adju
+Conj Pred Subj Cmpl Cmpl
+Rela PreC Adju
+Conj Pred Subj Adju
+PreC Subj
+Subj PreC
+Rela PreC Adju
+PreC
+Subj PreC Adju
+PreC Adju
+Rela PreC
+Pred
+Conj Pred Cmpl
+PreC
+Subj PreC
+Subj PreC
+Pred Objc
+Conj Pred Subj Cmpl Objc
+Subj PreC Adju Adju
+Conj Pred Subj Adju
+Subj PreC
+Rela PreC
+Conj Pred Objc Adju
+Conj Pred Subj Cmpl
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+Subj PreC
+PreC Subj
+Subj PreC
+PreC Subj
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+PreC Adju
+Subj PreC
+Conj PreO Subj Cmpl
+Conj Pred Objc Adju Cmpl Cmpl
+Conj Pred Subj Cmpl Adju
+Conj Subj PreC
+Pred Objc
+Conj Pred Subj Cmpl
+Adju Cmpl
+Conj Adju Cmpl
+Adju Cmpl Adju
+Rela PreC Adju
+PreC Subj
+PreC Time Subj
+PreC Time Subj
+Conj PreC Subj
+PreC
+Subj PreC
+Subj PreC
+Conj Pred Cmpl Subj Loca
+Conj PreO Subj Cmpl Cmpl
+Conj Pred
+Adju Subj PreC
+Conj Pred Subj Objc Adju Cmpl
+Rela PreC Objc
+Conj Pred Subj Cmpl
+Conj Pred
+Conj Pred Subj Cmpl Cmpl
+Pred PreC Time
+Conj Cmpl Pred Cmpl
+Conj Adju Objc
+Conj Adju Cmpl Pred
+Pred Cmpl
+Conj Objc Pred Cmpl Subj
+Conj Pred Cmpl
+Pred Cmpl
+Conj Pred Cmpl
+Conj Pred Subj Cmpl Objc
+Conj Objc
+Rela Pred Adju PreC
+Conj PreC
+Cmpl Adju Adju
+Cmpl Adju Adju
+Conj Objc Adju
+Conj Cmpl Adju Adju
+Conj Objc Adju
+Conj Objc Adju
+Conj Objc
+Conj Adju Adju Adju
+Conj Adju Adju Adju
+Conj Adju Objc Adju
+Conj Adju Objc
+PreC
+Conj PreC Cmpl
+Adju Pred Objc
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred Subj
+Conj Pred Cmpl Objc
+Conj Pred Cmpl Adju
+Rela PreC Cmpl Subj
+Conj Pred Subj
+PreO
+Conj Adju Pred Cmpl
+Conj Subj Pred Objc
+Conj Pred Subj Objc Adju
+Conj Pred Subj
+Conj Pred Subj Cmpl
+Conj Pred Subj Cmpl
+Conj Pred
+Conj Pred Cmpl
+Conj Pred Cmpl Objc
+Conj Pred Objc Cmpl Time Adju
+Objc Adju
+Conj Pred
+Conj Pred Adju Time Adju
+Conj Pred Modi Cmpl
+Conj Pred Adju Cmpl
+Conj Cmpl Cmpl
+Conj Pred Subj Cmpl Adju
+Conj Pred
+Conj Pred Cmpl Subj
+Conj Subj Pred Objc Cmpl
+Conj Pred Subj Objc Adju Adju
+Conj Pred Cmpl Objc
+Rela Nega Pred PreC
+Conj Subj Pred Cmpl
+Conj Subj PreC
+Rela Pred Cmpl
+Loca Pred Time
+Conj Loca Pred Time
+Conj Pred Subj Cmpl
+Adju
+Rela Pred Cmpl
