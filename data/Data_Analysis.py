@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+import operator
 
 LBH = []
 with open('C:/Users/etien/Documents/Github/Probabilistic_Language_Change/data/phrase_functions/phrase_functions_LBH.txt') as inputfile:
@@ -40,6 +41,7 @@ for row,item in enumerate(EBH):
 dfEBH = pd.DataFrame(zeromatrixEBH, columns = uniqueFunctionsEBH)
         
 frequenciesEBH = dfEBH.sum(0).to_dict()
+sorted_x = sorted(frequenciesEBH.items(), key=operator.itemgetter(1))
 for key, value in frequenciesEBH.items():
     frequenciesEBH[key] = value / len(EBH)
     
@@ -50,7 +52,7 @@ max(amountFunctionsEBH)
 counter = collections.Counter(amountFunctionsEBH)
 print(counter)
 plt.hist(amountFunctionsEBH,[1,2,3,4,5,6,7], normed=True)
-
+plt.savefig('C:/Users/etien/Documents/Github/Probabilistic_Language_Change/data/EBHFUNCTIONFREQUENCY.jpg')
 
 ########################## LBH
 
@@ -70,6 +72,7 @@ for row,item in enumerate(LBH):
 dfLBH = pd.DataFrame(zeromatrixLBH, columns = uniqueFunctionsLBH)
         
 frequenciesLBH = dfLBH.sum(0).to_dict()
+sorted_y = sorted(frequenciesLBH.items(), key=operator.itemgetter(1))
 for key, value in frequenciesEBH.items():
     frequenciesLBH[key] = value / len(LBH)
     
@@ -79,7 +82,7 @@ max(amountFunctionsLBH)
 counter = collections.Counter(amountFunctionsLBH)
 print(counter)
 plt.hist(amountFunctionsLBH,[1,2,3,4,5,6,7], normed=True)
-
+plt.savefig('C:/Users/etien/Documents/Github/Probabilistic_Language_Change/data/LBHFUNCTIONFREQUENCY.jpg')
 #SRATISTICS
 stats.bartlett(amountFunctionsEBH,amountFunctionsLBH)
 stats.mstats.kruskalwallis(amountFunctionsEBH,amountFunctionsLBH)
@@ -93,15 +96,19 @@ stats.ttest_ind(amountFunctionsEBH,amountFunctionsLBH)
 
 #Occurences of functions
 dfLBHCount = dfLBH.groupby(dfLBH.columns.tolist()).size().reset_index().rename(columns={0:'count'})
-dfLBHCount['count'] = dfLBHCount['count']/len(LBH)
+#dfLBHCount['count'] = dfLBHCount['count']/len(LBH)
 dfLBHCount.sort("count", ascending=False)[:5]
 
+
 dfEBHCount = dfEBH.groupby(dfEBH.columns.tolist()).size().reset_index().rename(columns={0:'count'})
-dfEBHCount['count'] = dfEBHCount['count']/len(EBH)
+##dfEBHCount['count'] = dfEBHCount['count']/len(EBH)
 dfEBHCount.sort("count", ascending=False)[:5]
+len(dfEBHCount)
 
 
 
+sorted_x = sorted(frequenciesEBH.keys(), key=operator.itemgetter(1))
+dfEBH
 
 
 
