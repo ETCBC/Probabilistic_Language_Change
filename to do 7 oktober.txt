@@ -1,0 +1,7 @@
+
+subsampling
+factors of results
+test numbers
+methodology
+
+Kullback-Leibler divergence
