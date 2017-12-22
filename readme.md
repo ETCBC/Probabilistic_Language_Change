@@ -1,9 +1,7 @@
 # A Probabilistic Approach to Linguistic Variation and Change in Biblical Hebrew
 ## A Network Academy Assistant Project
-<table>
-<tr>![Network Institute](images/network_institute.png)</tr>
-<tr>![ETCBC](images/etcbc_logo.png)</tr>
-<table>
+![Network Institute](images/network_institute.png)
+![ETCBC](images/etcbc_logo.png)
 
 Cody Kingham & Etienne van de Bijl
 
