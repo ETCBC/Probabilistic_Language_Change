@@ -1,5 +1,5 @@
 # A Probabilistic Approach to Linguistic Variation and Change in Biblical Hebrew
-## A Network Academy Assistant Project
+## Cody Kingham & Etienne van de Bijl
 
 <p align="center">
     <img src="images/network_institute.png">
@@ -7,8 +7,7 @@
     <img src="images/science_logo.png" height=68 width=269>
 </p>
 
-**Cody Kingham & Etienne van de Bijl**
-
+## Description
 The project addresses the longstanding problem of linguistic dating of the Psalms. We will investigate the novel idea of analyzing the text by elaborating on techniques and concepts from the analysis of social networks. Specifically, a probabilistic model (Markov chain) will be developed that captures the linguistic structure of the ‘textual network’.
 <br>
 <br>
