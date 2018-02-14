@@ -23,5 +23,6 @@ We will interpret the text elements obtained in Phase 1 as ‘agents’ in a soc
 ### Phase 2 
 A Markov chain analysis of the text-network is carried out elaborating on recent findings in Markov chain theory for cluster identification, where we make use of community measures such as expected distance between text elements. An important issue is whether Early Biblical Hebrew books (EBH; e.g., Judges, Samuel, according to most scholars composed before the Babylonian Exile) and Late Biblical Hebrew books (LBH; e.g., the books of Chronicles, unmistakably post-exilic) have enough inner consistency and are separated enough from each other to be able to classify a text of unknown date (e.g., the ‘timeless’ poetry of the Psalms) to one of these language phases.
 <br>
+<br>
 We believe that this research can have groundbreaking implications for the identification of text types in library search (e.g., find all poems with ‘hope’ and ‘Monday’ as joint topics). While Markov chains have been successfully applied to automatic translation, this project will explore the novel application to understanding the linguistic structure of a text.
 
