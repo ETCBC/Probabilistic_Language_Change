@@ -3,3 +3,4 @@ data_check.ipynb
 literature
 *.docx
 .DS_Store
+.ipynb_checkpoints
