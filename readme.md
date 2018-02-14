@@ -2,9 +2,15 @@
 ## Cody Kingham & Etienne van de Bijl
 
 <p align="center">
-    <img src="images/network_institute.png">
-    <img src="images/etcbc_logo.png" height=100 width=290>
-    <img src="images/science_logo.png" height=68 width=269>
+    <a href="http://www.networkinstitute.org/academy-assistants/academy-projects-17/">
+        <img src="images/network_institute.png">
+    </a>
+    <a href="http://www.etcbc.nl">
+        <img src="images/etcbc_logo.png" height=100 width=290>
+    </a>
+    <a href="https://science.vu.nl/en/index.aspx">
+        <img src="images/science_logo.png" height=68 width=269>
+    </a>
 </p>
 
 ## Description
