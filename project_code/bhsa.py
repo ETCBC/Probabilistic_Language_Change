@@ -1,3 +1,14 @@
+'''
+This module accesses and returns BHSA data from the Hebrew Bible
+which is necessary for analyzing the syntactic transitions in the 
+Biblical Hebrew texts. Based on this data, the code found in analysis.py
+can build a model of the language tendencies of a given book or group of books.
+
+*IMPORTANT*
+If the user is neither Etienne or Cody, they must format their path to their copy
+of the BHSA data below or they will receive an error.
+'''
+
 from tf.fabric import Fabric
 import getpass, collections, os
 
@@ -10,7 +21,7 @@ if getpass.getuser() == 'etien' and os.path.exists(etien_path):
 elif getpass.getuser() == 'cody' and os.path.exists(cody_path):
     locations = cody_path
 else:
-    raise Exception('Data path is not formatted correctly for Etienne/Cody or data is located elsewhere.')
+    raise Exception('Data path is not formatted correctly...Are you Etienne or Cody? If not, you must change the data path located in project_code/bhsa.py')
 
 # load TF and BHSA data
 TF = Fabric(locations=locations, modules='c', silent=True)
