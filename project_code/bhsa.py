@@ -47,9 +47,8 @@ all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to
 def get_data(book_dict):
     
     '''
-    Returns selected BHSA data as two dictionaries:
-    One with narrative data and the other with discourse.
-    The structure of the dicts is:
+    Returns selected BHSA data as a dictionary:
+    The structure of the dict is:
         data[FEATURE][BOOK][DOMAIN] = list(list()*N)
     
     --Arguments--
