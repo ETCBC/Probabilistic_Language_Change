@@ -1,15 +1,6 @@
 from tf.fabric import Fabric
 import getpass, collections, os
 
-# define books
-lbh_books = {'1_Chronicles', '2_Chronicles', 
-             'Ezra', 'Esther', 'Nehemiah'}
-sbh_books = {'Genesis', 'Exodus','Leviticus', 
-             'Deuteronomy','Joshua', 'Judges', 
-             '1_Kings', '2_Kings', '1_Samuel',
-             '2_Samuel'}
-
-
 # format paths for Etienne or Cody
 etien_path = 'C:/Users/etien/Documents/github/bhsa/tf'
 cody_path = '/Users/cody/github/etcbc/bhsa/tf'
@@ -32,29 +23,59 @@ api = TF.load('''
 
 api.makeAvailableIn(globals()) # globalize TF methods
 
-def get_data(data_path=''):
+# define book groups & names
+lbh_books = ('1_Chronicles', '2_Chronicles', 
+             'Ezra', 'Esther', 'Nehemiah')
+sbh_books = ('Genesis', 'Exodus','Leviticus', 
+             'Deuteronomy','Joshua', 'Judges', 
+             '1_Kings', '2_Kings', '1_Samuel',
+             '2_Samuel')
+all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to get english names
+
+
+def get_data(book_dict):
     
     '''
-    This function returns ETCBC BHSA data.
-    It loads the data from Text-Fabric.
+    Returns selected BHSA data as two dictionaries:
+    One with narrative data and the other with discourse.
+    The structure of the dicts is:
+        data[FEATURE][BOOK][DOMAIN] = list(list()*N)
+    
+    --Arguments--
+    book_dict - a dictionary containing English HB book names
+        from which clauses are selected. Key is the name of the group
+        of books, e.g. "LBH" or "all". Value is an iterable of English book names.
     '''     
     
-    # structure: data[FEATURE][BOOK] = list(list()*N)
-    data = collections.defaultdict(lambda: collections.defaultdict(list)) 
+    # reverse-map books to their grouping
+    book_group = dict((book, group) for group, book in book_dict.items())
+    
+    # data dictionary containing all data
+    # structure: data[FEATURE][BOOK][DOMAIN] = list(list()*N)
+    # both narrative and discourse data is gathered
+    data = collections.defaultdict(lambda: # feature
+                                        collections.defaultdict( # book
+                                            lambda: collections.defaultdict(list) # domain
+                                        ) 
+                                  ) 
 
-    for chapter in F.otype.s('chapter'):
+    # gather data per group, per book
+    for book, group in book_group.items():
 
-        # format book data
-        book, ch, vs = T.sectionFromNode(chapter)
-        if book not in (lbh_books | sbh_books): # skip non-studied books
-            continue
-        book_typ = 'lbh' if book in lbh_books else 'sbh' # set to lbh or sbh
+        # get node for Text-Fabric processing
+        book_node = T.nodeFromSection((book,))[0]
 
         # text constituents (clause type transitions)
-        clauses = L.d(chapter, otype='clause')
-        clause_typs = [F.typ.v(clause) for clause in L.d(chapter, otype='clause')]
+        clauses = L.d(book, otype='clause')
 
-        # clause constituents
+        # add clause-level data to data dict
+        for this_domain in ('N', 'D'): # narrative/discourse
+            clause_typs = [F.typ.v(clause) for clause in L.d(book, otype='clause') # separate clause types by domain
+                              if F.domain.v(clause) == this_domain]
+            data['clause_types'][book][domain].append(clause_typs)
+            data['clause_types'][book_typ][domain].append(clause_typs)
+        
+        # add phrase- & word-level data to data dict
         for clause in clauses:
 
             # phrase level data
@@ -63,27 +84,22 @@ def get_data(data_path=''):
 
             # word level data
             parts_of_speech = [F.pdp.v(word) for word in L.d(clause, otype='word')]
-
-            # selection restrictions:
-            if any([
-                    F.domain.v(clause) != 'N', # must be narrative
-                    ]):
-                continue # skip it
-
+            
+            # current domain, i.e. narrative or discourse
+            domain = F.domain.v(clause)
+            
+            # save clause constituent data
             # put data in data dict
-            data['phrase_functions'][book].append(ph_functions)
-            data['phrase_types'][book].append(ph_typs)
-            data['word_pos'][book].append(parts_of_speech)
+            data['phrase_functions'][book][domain].append(ph_functions)
+            data['phrase_types'][book][domain].append(ph_typs)
+            data['word_pos'][book][domain].append(parts_of_speech)
 
-            # add by book type (LBH vs. SBH)
-            data['phrase_functions'][book_typ].append(ph_functions)
-            data['phrase_types'][book_typ].append(ph_typs)
-            data['word_pos'][book_typ].append(parts_of_speech)
-
-        # put data in datadict
-        data['clause_types'][book].append(clause_typs)
-        data['clause_types'][book_typ].append(clause_typs)
-        
+            # add by book type (e.g. "LBH" or "all")
+            data['phrase_functions'][book_typ][domain].append(ph_functions)
+            data['phrase_types'][book_typ][domain].append(ph_typs)
+            data['word_pos'][book_typ][domain].append(parts_of_speech)
+            
+    # return all data
     return data
 
 def unique(otype='', feature=''):
