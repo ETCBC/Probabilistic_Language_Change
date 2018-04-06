@@ -43,23 +43,20 @@ sbh_books = ('Genesis', 'Exodus','Leviticus',
              '2_Samuel')
 all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to get english names
 
+book_sets = {'lbh': lbh_books,
+             'sbh': sbh_books,
+             'all': all_books}
 
-def get_data(book_dict):
+def get_data(books='all'):
     
     '''
-    Returns selected BHSA data as a dictionary:
-    The structure of the dict is:
-        data[FEATURE][BOOK][DOMAIN] = list(list()*N)
+    --input--
+    iterable of book names
     
-    --Arguments--
-    book_dict - a dictionary containing English HB book names
-        from which clauses are selected. Key is the name of the group
-        of books, e.g. "LBH" or "all". Value is an iterable of English book names.
+    --output--
+    *Data...
     '''     
-    
-    # reverse-map books to their grouping
-    book_group = dict((book, group) for group, book in book_dict.items())
-    
+
     # data dictionary containing all data
     # structure: data[FEATURE][BOOK][DOMAIN] = list(list()*N)
     # both narrative and discourse data is gathered
@@ -68,22 +65,25 @@ def get_data(book_dict):
                                             lambda: collections.defaultdict(list) # domain
                                         ) 
                                   ) 
-
+    
+    # configure books list
+    if type(books) == str and books in book_sets:
+        books = book_sets[books]
+    
     # gather data per group, per book
-    for book, group in book_group.items():
+    for book in books:
 
         # get node for Text-Fabric processing
-        book_node = T.nodeFromSection((book,))[0]
+        book_node = T.nodeFromSection((book,))
 
         # text constituents (clause type transitions)
-        clauses = L.d(book, otype='clause')
+        clauses = L.d(book_node, otype='clause')
 
         # add clause-level data to data dict
         for this_domain in ('N', 'D'): # narrative/discourse
-            clause_typs = [F.typ.v(clause) for clause in L.d(book, otype='clause') # separate clause types by domain
+            clause_typs = [F.typ.v(clause) for clause in L.d(book_node, otype='clause') # cl types by domain
                               if F.domain.v(clause) == this_domain]
-            data['clause_types'][book][domain].append(clause_typs)
-            data['clause_types'][book_typ][domain].append(clause_typs)
+            data['clause_types'][book][this_domain].append(clause_typs)
         
         # add phrase- & word-level data to data dict
         for clause in clauses:
@@ -103,11 +103,6 @@ def get_data(book_dict):
             data['phrase_functions'][book][domain].append(ph_functions)
             data['phrase_types'][book][domain].append(ph_typs)
             data['word_pos'][book][domain].append(parts_of_speech)
-
-            # add by book type (e.g. "LBH" or "all")
-            data['phrase_functions'][book_typ][domain].append(ph_functions)
-            data['phrase_types'][book_typ][domain].append(ph_typs)
-            data['word_pos'][book_typ][domain].append(parts_of_speech)
             
     # return all data
     return data
