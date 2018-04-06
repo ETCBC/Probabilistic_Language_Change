@@ -1,4 +1,4 @@
-from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import squareform
 
@@ -24,6 +24,10 @@ def squareFormFunction(v):
     # if a redundant one is passed, a condensed distance matrix is returned.
     return squareform(v)
 
+def flattenClustering(linkageMatrix, t, criterion):
+    # Input: linkage Matrix, t = threshold, criterion: maxclust or other
+    # Output: Array with objects in clusters
+    return fcluster(linkageMatrix, t, criterion) 
 
 
 
