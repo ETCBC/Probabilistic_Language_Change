@@ -1,14 +1,14 @@
 import pandas as pd
 import collections
 
-def make_transitions(feature_dict):
+def make_transitions(feature_dict, clause_ends=True):
     '''
     --input--
     feature dictionary
     dict[book] = list(list(strings))
     
     --output--
-    x2 df(transition frequencies), df(transition ratios)
+    x2 df(trans. frequencies x book), df(trans. ratios x book)
     '''
     
     df_Transition_freq = dict() # Transition matrix with frequences
@@ -22,9 +22,13 @@ def make_transitions(feature_dict):
         # count transitions using bigrams
         transitions = list()
         for clause in clauses:
-            transitions.append("Clause_Begin")
-            transitions.extend(clause)
-            transitions.append("Clause_End")
+            
+            if clause_ends:
+                transitions.append("Clause_Begin")
+                transitions.extend(clause)
+                transitions.append("Clause_End")
+            else:
+                transitions.extend(clause)
             
         for i in range(0, len(transitions)-1):
             
@@ -40,9 +44,12 @@ def make_transitions(feature_dict):
             
         # create the dataframes
         df_trans = pd.DataFrame(transition_pairs).fillna(0)
-        df_prop = df_trans.apply(lambda column: column.values / sum(column.values))
         
-    return df_trans, df_prop
+        # normalize:
+        df_mean = df_trans.sum().mean()
+        df_norm = df_trans.apply(lambda col: col * df_mean / col.sum())
+        
+    return df_trans, df_norm
 
 def make_stacked_transitions(data_dict):
     '''
@@ -50,36 +57,37 @@ def make_stacked_transitions(data_dict):
     output from bhsa.get_data()
     i.e. dict[feature][domain][book] = list(list(strings))
     
-    
     --output--
-    x2 dict(transition frequencies), dict(transition ratios)
+    x2 df(trans. frequencies x book), df(trans. ratios x book)
     stacked for all features/domains by book
     '''
     
     freq_matrices = {}
-    prop_matrices = {}
+    norm_matrices = {}
     
     for feature, domains in data_dict.items():    
         for domain in domains:
             
+            clause_ends = True if feature != 'clause_types' else False
+            
             # add all data together
             data = data_dict[feature][domain]
             name = feature+'|'+domain
-            trans_freq, trans_prop = make_transitions(data)
+            trans_freq, trans_norm = make_transitions(data, clause_ends)
             
             # save to dicts
             freq_matrices[name] = trans_freq
-            prop_matrices[name] = trans_prop            
+            norm_matrices[name] = trans_norm           
         
     stacked_freq = pd.DataFrame()
-    stacked_prop = pd.DataFrame()
+    stacked_norm = pd.DataFrame()
         
     # make the frequency stacked matrices
     for data_name, matrix in freq_matrices.items():
         stacked_freq = stacked_freq.append(matrix)
 
-    # make the proportional stacked matrices
-    for data_name, matrix in prop_matrices.items():
-        stacked_prop = stacked_prop.append(matrix)
+    # make the normalized stacked matrices
+    for data_name, matrix in norm_matrices.items():
+        stacked_norm = stacked_norm.append(matrix)
     
-    return stacked_freq, stacked_prop
+    return stacked_freq.fillna(0), stacked_norm.fillna(0)
