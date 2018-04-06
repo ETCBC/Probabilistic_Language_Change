@@ -51,10 +51,12 @@ def get_data(books='all'):
     
     '''
     --input--
-    iterable of book names
+    books='all'|'sbh'|'lbh'
+    or iterable of book names
     
     --output--
-    *Data...
+    dictionary
+        data[feature][domain][book] = list(list(clauses)*N)
     '''     
 
     # data dictionary containing all data
@@ -83,7 +85,7 @@ def get_data(books='all'):
         for this_domain in ('N', 'D'): # narrative/discourse
             clause_typs = [F.typ.v(clause) for clause in L.d(book_node, otype='clause') # cl types by domain
                               if F.domain.v(clause) == this_domain]
-            data['clause_types'][book][this_domain].append(clause_typs)
+            data['clause_types'][this_domain][book].append(clause_typs)
         
         # add phrase- & word-level data to data dict
         for clause in clauses:
@@ -100,9 +102,9 @@ def get_data(books='all'):
             
             # save clause constituent data
             # put data in data dict
-            data['phrase_functions'][book][domain].append(ph_functions)
-            data['phrase_types'][book][domain].append(ph_typs)
-            data['word_pos'][book][domain].append(parts_of_speech)
+            data['phrase_functions'][domain][book].append(ph_functions)
+            data['phrase_types'][domain][book].append(ph_typs)
+            data['word_pos'][domain][book].append(parts_of_speech)
             
     # return all data
     return data
