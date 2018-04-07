@@ -72,46 +72,10 @@ def df_dict_Transformation(Transition_freq):
                 dict_Transitions[bookname][transition] = value
     return dict_Transitions
 
-
+def stackTransitions(Transition_Dicts, feature, domain):          
+    stacked_df = pd.DataFrame()
+    for l in feature:
+        for d in domain:
+            stacked_df = stacked_df.append(Transition_Dicts[l][d])
+    return stacked_df.fillna(0)
     
-
-def make_stacked_transitions(data_dict):
-    '''
-    --input--
-    output from bhsa.get_data()
-    i.e. dict[feature][domain][book] = list(list(strings))
-    
-    --output--
-    x2 df(trans. frequencies x book), df(trans. ratios x book)
-    stacked for all features/domains by book
-    '''
-    
-    freq_matrices = {}
-    norm_matrices = {}
-    
-    for feature, domains in data_dict.items():    
-        for domain in domains:
-            
-            clause_ends = True if feature != 'clause_types' else False
-            
-            # add all data together
-            data = data_dict[feature][domain]
-            name = feature+'|'+domain
-            trans_freq, trans_norm = make_transitions(data, clause_ends)
-            
-            # save to dicts
-            freq_matrices[name] = trans_freq
-            norm_matrices[name] = trans_norm           
-        
-    stacked_freq = pd.DataFrame()
-    stacked_norm = pd.DataFrame()
-        
-    # make the frequency stacked matrices
-    for data_name, matrix in freq_matrices.items():
-        stacked_freq = stacked_freq.append(matrix)
-
-    # make the normalized stacked matrices
-    for data_name, matrix in norm_matrices.items():
-        stacked_norm = stacked_norm.append(matrix)
-    
-    return stacked_freq.fillna(0), stacked_norm.fillna(0)
