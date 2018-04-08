@@ -9,7 +9,7 @@ def dendogramPlot(linkageMatrix, labels):
     # Input: linkage Matrix, labels for the objects.
     # Output: dendogram plot
     plt.figure(figsize=(25,10))
-    dendrogram(Z, labels = books)
+    dendrogram(linkageMatrix, labels = labels)
     plt.show()
     
 def linkageFunction(y, method):
