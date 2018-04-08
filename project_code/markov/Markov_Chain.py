@@ -44,13 +44,13 @@ def countTransitions(Transition_freq):
 
 def averageTransformation(Transition_freq):
     nTransitions = 0
-    for bookname, df in df_Transition_freq.items(): 
-        nTransitions = nTransitions + df.sum()
-    mean = nTransitions / len(df_Transition_freq.keys())
+    for bookname, df in Transition_freq.items(): 
+        nTransitions = nTransitions + df.sum().sum()
+    mean = nTransitions / len(Transition_freq.keys())
     
     Transition_average = dict() 
     for bookname, df in Transition_freq.items(): 
-        Transition_average[bookname] = df.div(df.sum()) * mean
+        Transition_average[bookname] = df.div(df.sum()) * mean 
     return Transition_average
         
 def MCTransformation(Transition_freq):
