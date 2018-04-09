@@ -75,7 +75,10 @@ def get_data(books='all'):
     if type(books) == list:
         books_list = tuple()
         for book in books:
-            books_list= books_list + book_sets[book] 
+            if book in book_sets:
+                books_list= books_list + book_sets[book] 
+            else:
+                books_list = books_list + (book,)
         books = books_list   
 
     # gather data per group, per book

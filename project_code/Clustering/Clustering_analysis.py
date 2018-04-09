@@ -8,8 +8,10 @@ clusterMethods = {"single","complete","average","weighted","median","centroid","
 def dendogramPlot(linkageMatrix, labels):
     # Input: linkage Matrix, labels for the objects.
     # Output: dendogram plot
-    plt.figure(figsize=(25,10))
-    dendrogram(linkageMatrix, labels = labels)
+    plt.figure(figsize=(25,20))
+    ax = plt.gca()
+    dendrogram(linkageMatrix, labels = labels, orientation ="right")
+    ax.tick_params(axis='y', which='major', labelsize=20)
     plt.show()
     
 def linkageFunction(y, method):
