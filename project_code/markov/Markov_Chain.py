@@ -61,6 +61,7 @@ def averageTransformation(Transition_freq):
 def MCTransformation(Transition_freq):
     Transition_prob = dict() 
     for bookname, df in Transition_freq.items(): 
+        df = df + 0.1
         df_new = df.div(df.sum(axis=0), axis=1).fillna(0)
         Transition_prob[bookname] = df_new
     return Transition_prob
@@ -68,7 +69,10 @@ def MCTransformation(Transition_freq):
 def expectedSteps(Transition_freq):
     stepsMatrix = dict() 
     for bookname, df in Transition_freq.items():
-        inverse = inv(np.identity(len(df.columns))-df.values)
+        if 1 in df.values:
+            print(df)
+        inverse = inv(np.eye(len(df.columns))-df.values)
+        #print(inverse)
         stepsMatrix[bookname] = pd.DataFrame(inverse, index= df.keys(), columns = df.keys())
     return stepsMatrix
     
