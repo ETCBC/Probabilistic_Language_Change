@@ -14,4 +14,4 @@
 </p>
 
 ## Description
-The project addresses the longstanding problem of linguistic dating of the Psalms. We will investigate the novel idea of analyzing the text by elaborating on techniques and concepts from the analysis of social networks. Specifically, a probabilistic model (Markov chain) will be developed that captures the linguistic structure of the ‘textual network’.
+The project addresses the longstanding problem of linguistically categorizing texts in the Hebrew Bible using syntactic tendencies. We intend to test whether so-called Standard Biblical Hebrew books and Late Biblical Hebrew books exhibit enough internal consistency within the two groups to confirm the traditional divisions. We do this by constructing a Markov model of the clause, phrase, and part of speech tendencies for each book in the Hebrew Bible. We then measure the distance between books in order to cluster them based on similarity and dissimilarity. We hope to apply our model to texts whose date/origin of composition is debated. 
