@@ -18,4 +18,4 @@ The project addresses the longstanding problem of linguistically categorizing te
 
 ### Markov Chain Example ([wikipedia](https://en.wikipedia.org/wiki/Markov_chain))
 
-<a href="https://en.wikipedia.org/wiki/Markov_chain"> 
+<img src="https://en.wikipedia.org/wiki/Markov_chain"> 
