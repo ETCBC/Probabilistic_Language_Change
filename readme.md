@@ -1,5 +1,5 @@
 # A Probabilistic Approach to Linguistic Variation and Change in Biblical Hebrew
-## Cody Kingham & Etienne van de Bijl
+## Etienne van de Bijl and Cody Kingham
 
 <p align="center">
     <a href="http://www.networkinstitute.org/academy-assistants/academy-projects-17/">
