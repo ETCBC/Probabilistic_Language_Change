@@ -10,33 +10,37 @@ of the BHSA data below or they will receive an error.
 '''
 
 from tf.fabric import Fabric
+from tree_utils import structure, layout
 import getpass, collections, os
 
 # format paths for Etienne or Cody
-etien_path = 'C:/Users/etien/Documents/github/bhsa/tf'
-cody_path = '/Users/cody/github/etcbc/bhsa/tf'
+etien_path = ['C:/Users/etien/Documents/github/bhsa/tf',
+              'C:/Users/etien/Documents/lingo/trees/tf']
+cody_path = ['/Users/cody/github/etcbc/bhsa/tf',
+             '/Users/cody/github/etcbc/lingo/trees/tf']
 
-if getpass.getuser() == 'etien' and os.path.exists(etien_path):
+if getpass.getuser() == 'etien' and os.path.exists(etien_path[0]) and os.path.exists(etien_path[1]):
     locations = etien_path
-elif getpass.getuser() == 'cody' and os.path.exists(cody_path):
+elif getpass.getuser() == 'cody' and os.path.exists(cody_path[0]) and os.path.exists(cody_path[1]):
     locations = cody_path
 else:
-    raise Exception('Data path is not formatted correctly...Are you Etienne or Cody? If not, you must change the data path located in project_code/bhsa.py')
+    raise Exception('Data path is not formatted correctly...Are you Etienne or Cody? If not, you must change the data path located in project_code/data/bhsa.py')
 
 # load TF and BHSA data
-TF = Fabric(locations=locations, modules='c', silent=True)
+TF = Fabric(locations=locations, modules='2017', silent=True)
 api = TF.load('''
               otype
               book chapter verse
               function domain
-              typ pdp kind
+              typ pdp kind tree
               ''', silent=True)
 
 api.makeAvailableIn(globals()) # globalize TF methods
 
 # define book groups & names
 lbh_books = ('1_Chronicles', '2_Chronicles', 
-             'Ezra', 'Esther', 'Nehemiah')
+             'Ezra', 'Esther', 'Nehemiah', 
+             'Song_of_songs', 'Ecclesiastes')
 sbh_books = ('Genesis', 'Exodus','Leviticus', 
              'Deuteronomy','Joshua', 'Judges', 
              '1_Kings', '2_Kings', '1_Samuel',
@@ -66,7 +70,7 @@ def get_data(books='all'):
                                         collections.defaultdict( # book
                                             lambda: collections.defaultdict(list) # domain
                                         ) 
-                                  ) 
+                                  )
     
     # configure books list
     if type(books) == str and books in book_sets:
@@ -89,6 +93,7 @@ def get_data(books='all'):
 
         # text constituents (clause type transitions)
         clauses = L.d(book_node, otype='clause')
+        sentences = L.d(book_node, otype='sentence')
 
         # add clause-level data to data dict
         for this_domain in ('N', 'D'): # narrative/discourse
@@ -114,7 +119,11 @@ def get_data(books='all'):
             data['phrase_functions'][domain][book].append(ph_functions)
             data['phrase_types'][domain][book].append(ph_typs)
             data['word_pos'][domain][book].append(parts_of_speech)
-            
+                                                                                     
+        # add tree data
+        for sentence in sentences:
+            data['trees'][domain][book].append(structure(F.tree.v(sentence)))
+
     # return all data
     return data
 
@@ -139,3 +148,5 @@ def unique(otype='', feature=''):
     unique_features = list(v[0] for v in feature_count.most_common())
     
     return unique_features
+    
+    
