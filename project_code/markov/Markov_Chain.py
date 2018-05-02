@@ -61,7 +61,6 @@ def averageTransformation(Transition_freq):
 def MCTransformation(Transition_freq):
     Transition_prob = dict() 
     for bookname, df in Transition_freq.items(): 
-        df = df + 0.1
         df_new = df.div(df.sum(axis=0), axis=1).fillna(0)
         Transition_prob[bookname] = df_new
     return Transition_prob
