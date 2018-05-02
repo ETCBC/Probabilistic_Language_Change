@@ -15,3 +15,7 @@
 
 ## Description
 The project addresses the longstanding problem of linguistically categorizing texts in the Hebrew Bible using syntactic tendencies. We intend to test whether so-called Standard Biblical Hebrew books and Late Biblical Hebrew books exhibit enough internal consistency within the two groups to confirm the traditional divisions. We do this by constructing a Markov model of the clause, phrase, and part of speech tendencies for each book in the Hebrew Bible. We then measure the distance between books in order to cluster them based on similarity and dissimilarity. We hope to apply our model to texts whose date/origin of composition is debated. 
+
+### Markov Chain Example
+
+![Markov Chain](https://en.wikipedia.org/wiki/File:Finance_Markov_chain_example_state_space.svg)
