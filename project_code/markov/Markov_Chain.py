@@ -65,16 +65,8 @@ def MCTransformation(Transition_freq):
         Transition_prob[bookname] = df_new
     return Transition_prob
 
-def expectedSteps(Transition_freq):
-    stepsMatrix = dict() 
-    for bookname, df in Transition_freq.items():
-        if 1 in df.values:
-            print(df)
-        inverse = inv(np.eye(len(df.columns))-df.values)
-        #print(inverse)
-        stepsMatrix[bookname] = pd.DataFrame(inverse, index= df.keys(), columns = df.keys())
-    return stepsMatrix
-    
+
+#Transition matrix to dictionary
 def df_dict_Transformation(Transition_freq):
     dict_Transitions = collections.defaultdict(dict)
     for bookname, df in Transition_freq.items(): 
@@ -88,6 +80,8 @@ def df_dict_Transformation(Transition_freq):
                 dict_Transitions[bookname][transition] = value
     return dict_Transitions
 
+
+#Stack files
 def stackTransitions(Transition_Dicts, feature, domain):          
     stacked_df = pd.DataFrame()
     for l in feature:

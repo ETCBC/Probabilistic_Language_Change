@@ -10,12 +10,12 @@ of the BHSA data below or they will receive an error.
 '''
 
 from tf.fabric import Fabric
-from tree_utils import structure, layout
+from data.tree_utils import structure, layout
 import getpass, collections, os
 
 # format paths for Etienne or Cody
 etien_path = ['C:/Users/etien/Documents/github/bhsa/tf',
-              'C:/Users/etien/Documents/lingo/trees/tf']
+              'C:/Users/etien/Documents/github/lingo/trees/tf']
 cody_path = ['/Users/cody/github/etcbc/bhsa/tf',
              '/Users/cody/github/etcbc/lingo/trees/tf']
 
