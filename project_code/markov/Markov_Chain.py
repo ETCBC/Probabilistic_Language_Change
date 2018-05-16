@@ -2,8 +2,6 @@ import collections
 import numpy as np
 import pandas as pd
 import itertools
-from numpy.linalg import inv
-from scipy.linalg import det
 
 def unlist_Items(clauses, clause_states=True):    
     # Input: list of lists with abstracted text elements. 
@@ -37,6 +35,32 @@ def transitionMatrix(feature_dict, clause_states=True):
         df_Transition_freq[bookname] = pd.DataFrame(transition_Matrix, index=nodes, columns=nodes)
             
     return df_Transition_freq
+      
+def MCTransformation(Transition_freq):
+    Transition_prob = dict() 
+    for bookname, df in Transition_freq.items(): 
+        df_new = df.div(df.sum(axis=0), axis=1).fillna(0)
+        Transition_prob[bookname] = df_new
+    return Transition_prob
+
+#Transition matrix to dictionary
+def df_dict_Transformation(Transition_freq):
+    dict_Transitions = collections.defaultdict(dict)
+    for bookname, df in Transition_freq.items(): 
+        dictionary = df.to_dict(orient='split')
+        for i in range(0,len(dictionary["index"])):
+            for j in range(0,len(dictionary["columns"])):
+                statei = dictionary["index"][i]
+                statej = dictionary["index"][j]
+                transition = statei + "->" +  statej
+                value = dictionary["data"][i][j]   
+                dict_Transitions[bookname][transition] = value
+    return dict_Transitions
+
+
+
+
+######################################## 
 
 def countTransitions(Transition_freq):
     Transitions = dict()
@@ -57,29 +81,6 @@ def averageTransformation(Transition_freq):
         newDf =  df / total * mean 
         Transition_average[bookname] = newDf
     return Transition_average
-        
-def MCTransformation(Transition_freq):
-    Transition_prob = dict() 
-    for bookname, df in Transition_freq.items(): 
-        df_new = df.div(df.sum(axis=0), axis=1).fillna(0)
-        Transition_prob[bookname] = df_new
-    return Transition_prob
-
-
-#Transition matrix to dictionary
-def df_dict_Transformation(Transition_freq):
-    dict_Transitions = collections.defaultdict(dict)
-    for bookname, df in Transition_freq.items(): 
-        dictionary = df.to_dict(orient='split')
-        for i in range(0,len(dictionary["index"])):
-            for j in range(0,len(dictionary["columns"])):
-                statei = dictionary["index"][i]
-                statej = dictionary["index"][j]
-                transition = statei + "->" +  statej
-                value = dictionary["data"][i][j]   
-                dict_Transitions[bookname][transition] = value
-    return dict_Transitions
-
 
 #Stack files
 def stackTransitions(Transition_Dicts, feature, domain):          
