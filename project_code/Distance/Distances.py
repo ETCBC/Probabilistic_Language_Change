@@ -27,6 +27,3 @@ def correlationToDistance(corr):
     # Input: Correlation
     # Output: Distance, either 1-correlation or sqrt(1-cor^2)
     return (1-corr)
-
-def helligerDistance(x,y):
-    return euclidean(np.sqrt(x), np.sqrt(y)) / np.sqrt(2)  
