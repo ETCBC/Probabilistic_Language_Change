@@ -39,7 +39,7 @@ def transitionMatrix(feature_dict, clause_states=True):
 def MCTransformation(Transition_freq):
     Transition_prob = dict() 
     for bookname, df in Transition_freq.items(): 
-        df_new = df.div(df.sum(axis=0), axis=1).fillna(0)
+        df_new = df.div(df.sum(axis=1), axis=0).fillna(0)
         Transition_prob[bookname] = df_new
     return Transition_prob
 
