@@ -2,7 +2,7 @@
 ## Etienne van de Bijl and Cody Kingham
 
 <p align="center">
-    <a href="http://www.networkinstitute.org/academy-assistants/academy-projects-17/">
+    <a href="http://networkinstitute.org/projects/a-probabilistic-approach-to-linguistic-variation-and-change-in-biblical-hebrew/">
         <img src="images/network_institute.png">
     </a>
     <a href="http://www.etcbc.nl">

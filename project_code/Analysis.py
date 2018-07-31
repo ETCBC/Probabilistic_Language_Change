@@ -1,5 +1,5 @@
-import os
-os.chdir("C:/Users/etien/Documents/Github/Probabilistic_Language_Change/project_code")
+#import os
+#os.chdir("C:/Users/etien/Documents/Github/Probabilistic_Language_Change/project_code")
 
 import pandas as pd 
 import numpy as np
@@ -12,7 +12,7 @@ import seaborn as sns
 #Libraries
 from data.bhsa import * #Load data
 from markov.Markov_Chain import * #Transitions
-from Clustering.Clustering_analysis import *
+from clustering.Clustering_analysis import *
 
 dataset = get_data(books=["sbh","lbh"])
 del dataset["trees"]
@@ -250,7 +250,7 @@ hierarchy.dendrogram(Z,labels=mean_distance.columns, orientation = "right")
 # Kmediods
 # =============================================================================
    
-from Clustering.Kmediods import *
+from clustering.Kmediods import *
 from sklearn.metrics.pairwise import pairwise_distances
 from scipy.spatial.distance import pdist, squareform
 from sklearn.metrics import silhouette_score
