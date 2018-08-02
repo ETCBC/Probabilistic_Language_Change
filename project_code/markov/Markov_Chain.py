@@ -30,7 +30,7 @@ def transitionMatrix(feature_dict, clause_states=True):
         for i in range(0, len(transitions)-1):
             state1 = nodes.index(transitions[i])
             state2 = nodes.index(transitions[i+1])
-            transition_Matrix[state1,state2] +=1 
+            transition_Matrix[state1,state2] += 1 
         
         df_Transition_freq[bookname] = pd.DataFrame(transition_Matrix, index=nodes, columns=nodes)
             
