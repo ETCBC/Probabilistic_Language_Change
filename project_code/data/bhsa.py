@@ -36,7 +36,7 @@ api = TF.load('''
               typ pdp kind tree
               ''', silent=True)
 
-B = Bhsa(api, 'notebook', version='2017')
+B = Bhsa(api, '', version='2017')
 
 api.makeAvailableIn(globals()) # globalize TF methods
 
@@ -79,7 +79,7 @@ def get_data(books='all'):
     if type(books) == str and books in book_sets:
         books = book_sets[books]
     
-    if type(books) == list:
+    elif type(books) == list:
         books_list = tuple()
         for book in books:
             if book in book_sets:
@@ -98,23 +98,23 @@ def get_data(books='all'):
         clauses = L.d(book_node, otype='clause')
         sentences = L.d(book_node, otype='sentence')
 
-        # add clause-level data to data dict
-        for this_domain in ('N', 'D'): # narrative/discourse
-            clause_typs = [F.typ.v(clause) for clause in L.d(book_node, otype='clause') # cl types by domain
-                              if F.domain.v(clause) == this_domain]
-            data['clause_types'][this_domain][book].append(clause_typs)
+        # add clause-level domain (e.g. narrative, quotation); NB fixed from previous version -Cody
+        for clause in clauses:
+            this_domain = F.domain.v(clause)
+            this_typ = F.typ.v(clause)
+            data['clause_types'][this_domain][book].append([this_typ])
         
         # add phrase- & word-level data to data dict
         for clause in clauses:
 
             # phrase level data
-            ph_functions = [F.function.v(phrase) for phrase in L.d(clause, otype='phrase')]
-            ph_typs = [F.typ.v(phrase) for phrase in L.d(clause, otype='phrase')]
+            ph_functions = [F.function.v(phrase) for phrase in L.d(clause, 'phrase')]
+            ph_typs = [F.typ.v(phrase) for phrase in L.d(clause, 'phrase')]
 
             # word level data
-            parts_of_speech = [F.pdp.v(word) for word in L.d(clause, otype='word')]
+            parts_of_speech = [F.pdp.v(word) for word in L.d(clause, 'word')]
             
-            # current domain, i.e. narrative or discourse
+            # current domain, i.e. narrative, quotation, etc.
             domain = F.domain.v(clause)
             
             # save clause constituent data
@@ -123,9 +123,9 @@ def get_data(books='all'):
             data['phrase_types'][domain][book].append(ph_typs)
             data['word_pos'][domain][book].append(parts_of_speech)
                                                                                      
-        # add tree data
-        for sentence in sentences:
-            data['trees'][domain][book].append(structure(F.tree.v(sentence)))
+        # add tree data; turned off for now -Cody
+#         for sentence in sentences:
+#             data['trees'][domain][book].append(structure(F.tree.v(sentence)))
 
     # return all data
     return data
