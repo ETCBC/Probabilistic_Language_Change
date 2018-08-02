@@ -10,6 +10,7 @@ of the BHSA data below or they will receive an error.
 '''
 
 from tf.fabric import Fabric
+from tf.extra.bhsa import Bhsa
 from data.tree_utils import structure, layout
 import getpass, collections, os
 
@@ -34,6 +35,8 @@ api = TF.load('''
               function domain
               typ pdp kind tree
               ''', silent=True)
+
+B = Bhsa(api, 'notebook', version='2017')
 
 api.makeAvailableIn(globals()) # globalize TF methods
 
