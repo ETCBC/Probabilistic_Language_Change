@@ -14,26 +14,34 @@ from tf.extra.bhsa import Bhsa
 from data.tree_utils import structure, layout
 import getpass, collections, os
 
-# format paths for Etienne or Cody
-etien_path = ['C:/Users/etien/Documents/github/bhsa/tf',
-              'C:/Users/etien/Documents/github/lingo/trees/tf']
-cody_path = ['/Users/cody/github/etcbc/bhsa/tf',
-             '/Users/cody/github/etcbc/lingo/trees/tf']
-
-if getpass.getuser() == 'etien' and os.path.exists(etien_path[0]) and os.path.exists(etien_path[1]):
+# DO PATHS:
+etien_path = {'C:/Users/etien/Documents/github/bhsa/tf':'https://github.com/ETCBC/bhsa',
+              'C:/Users/etien/Documents/github/lingo/trees/tf':'https://github.com/ETCBC/lingo',
+              'C:/Users/etien/Documents/github/parallels/tf':'https://github.com/ETCBC/parallels'}
+cody_path = {'/Users/cody/github/etcbc/bhsa/tf':'https://github.com/ETCBC/bhsa',
+             '/Users/cody/github/etcbc/lingo/trees/tf':'https://github.com/ETCBC/lingo',
+             '/Users/cody/github/etcbc/parallels/tf':'https://github.com/ETCBC/parallels'}
+if getpass.getuser() == 'etien':
     locations = etien_path
-elif getpass.getuser() == 'cody' and os.path.exists(cody_path[0]) and os.path.exists(cody_path[1]):
+elif getpass.getuser() == 'cody':
     locations = cody_path
 else:
-    raise Exception('Data path is not formatted correctly...Are you Etienne or Cody? If not, you must change the data path located in project_code/data/bhsa.py')
-
+    locations = {}
+if not locations:
+    raise Exception('Please add your data paths in bhsa.py line 30.')
+for path in locations:
+    if not os.path.exists(path):
+        raise Exception(f'You need an extra datamodule in {os.path.dirname(path)}. Do "git pull {locations[path]}" to this location.')
+    
+    
 # load TF and BHSA data
-TF = Fabric(locations=locations, modules='2017', silent=True)
+TF = Fabric(locations=locations.keys(), modules='2017', silent=True)
 api = TF.load('''
-              otype
+              otype language
               book chapter verse
               function domain
               typ pdp kind tree
+              crossref
               ''', silent=True)
 
 B = Bhsa(api, '', version='2017')
@@ -41,18 +49,36 @@ B = Bhsa(api, '', version='2017')
 api.makeAvailableIn(globals()) # globalize TF methods
 
 # define book groups & names
-lbh_books = ('1_Chronicles', '2_Chronicles', 
-             'Ezra', 'Esther', 'Nehemiah', 
-             'Song_of_songs', 'Ecclesiastes')
+
+lbh_books = ('Song_of_songs', 'Ecclesiastes', 'Esther',
+             'Daniel','Ezra', 'Nehemiah', '1_Chronicles', 
+             '2_Chronicles')
 sbh_books = ('Genesis', 'Exodus','Leviticus', 
              'Deuteronomy','Joshua', 'Judges', 
-             '1_Kings', '2_Kings', '1_Samuel',
-             '2_Samuel')
+             '1_Samuel', '2_Samuel', '1_Kings', 
+             '2_Kings')
+
 all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to get english names
 
 book_sets = {'lbh': lbh_books,
              'sbh': sbh_books,
              'all': all_books}
+
+def filter_parallels(verse_nodes):
+    '''
+    --input--
+    iterable of verse nodes
+    
+    --output--
+    returns list of clause nodes from verses that exhibit 
+    <75% similarity with other verses.
+    '''
+    filtered_clauses = []
+    for verse in verse_nodes:
+        cr_scores = [cr[1] < 75 for cr in E.crossref.f(verse)]
+        if all(cr_scores):
+            filtered_clauses.extend(L.d(verse, 'clause'))
+    return filtered_clauses
 
 def get_data(books='all'):
     
@@ -75,6 +101,14 @@ def get_data(books='all'):
                                         ) 
                                   )
     
+    # map Chronicles, Kings, and Samuel to single books
+    book_map = {'1_Chronicles': 'Chronicles',
+                '2_Chronicles': 'Chronicles',
+                '1_Kings': 'Kings',
+                '2_Kings': 'Kings',
+                '1_Samuel': 'Samuel',
+                '2_Samuel': 'Samuel'}
+    
     # configure books list
     if type(books) == str and books in book_sets:
         books = book_sets[books]
@@ -93,13 +127,21 @@ def get_data(books='all'):
 
         # get node for Text-Fabric processing
         book_node = T.nodeFromSection((book,))
-
+        
         # text constituents (clause type transitions)
-        clauses = L.d(book_node, otype='clause')
-        sentences = L.d(book_node, otype='sentence')
+        if book in {'1_Chronicles', '2_Chronicles'}:
+            clauses = [cl for cl in filter_parallels(L.d(book_node, otype='verse'))]
+        else:
+            clauses = [cl for cl in L.d(book_node, otype='clause')
+                          if F.language.v(L.d(cl, 'word')[0]) == 'Hebrew'] # with Hebrew language check
+        sentences = [sn for sn in L.d(book_node, otype='sentence')
+                        if F.language.v(L.d(sn, 'word')[0]) == 'Hebrew']
 
+        book = book_map.get(book, book) # map Chronicles, Kings, Samuel from individual books
+        
         # add clause-level domain (e.g. narrative, quotation); NB fixed from previous version -Cody
         for clause in clauses:
+            
             this_domain = F.domain.v(clause)
             this_typ = F.typ.v(clause)
             data['clause_types'][this_domain][book].append([this_typ])
