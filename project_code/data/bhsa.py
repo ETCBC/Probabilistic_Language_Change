@@ -57,6 +57,7 @@ sbh_books = ('Genesis', 'Exodus','Leviticus',
              'Deuteronomy','Joshua', 'Judges', 
              '1_Samuel', '2_Samuel', '1_Kings', 
              '2_Kings')
+test_books = ('Jonah', 'Ruth')
 
 all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to get english names
 
@@ -80,7 +81,7 @@ def filter_parallels(verse_nodes):
             filtered_clauses.extend(L.d(verse, 'clause'))
     return filtered_clauses
 
-def get_data(books='all'):
+def get_data(books=[]):
     
     '''
     --input--
@@ -107,7 +108,9 @@ def get_data(books='all'):
                 '1_Kings': 'Kings',
                 '2_Kings': 'Kings',
                 '1_Samuel': 'Samuel',
-                '2_Samuel': 'Samuel'}
+                '2_Samuel': 'Samuel',
+                'Ezra': 'Ezra-Nehemiah',
+                'Nehemiah': 'Ezra-Nehemiah'}
     
     # configure books list
     if type(books) == str and books in book_sets:
@@ -132,7 +135,7 @@ def get_data(books='all'):
         if book in {'1_Chronicles', '2_Chronicles'}:
             clauses = [cl for cl in filter_parallels(L.d(book_node, otype='verse'))]
         else:
-            clauses = [cl for cl in L.d(book_node, otype='clause')
+            clauses = [cl for cl in filter_parallels(L.d(book_node, otype='verse'))
                           if F.language.v(L.d(cl, 'word')[0]) == 'Hebrew'] # with Hebrew language check
         sentences = [sn for sn in L.d(book_node, otype='sentence')
                         if F.language.v(L.d(sn, 'word')[0]) == 'Hebrew']
