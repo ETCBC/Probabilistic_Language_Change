@@ -44,20 +44,19 @@ api = TF.load('''
               crossref
               ''', silent=True)
 
-B = Bhsa(api, '', version='2017')
 
 api.makeAvailableIn(globals()) # globalize TF methods
 
 # define book groups & names
 
-lbh_books = ('Esther', 'Daniel','Ezra', 
-             'Nehemiah', '1_Chronicles', 
+lbh_books = ('Song_of_songs', 'Ecclesiastes', 'Esther',
+             'Daniel','Ezra', 'Nehemiah', '1_Chronicles', 
              '2_Chronicles')
 sbh_books = ('Genesis', 'Exodus','Leviticus', 
              'Deuteronomy','Joshua', 'Judges', 
              '1_Samuel', '2_Samuel', '1_Kings', 
              '2_Kings')
-test_books = ('Song_of_songs', 'Ecclesiastes', 'Jonah', 'Ruth')
+test_books = ('Jonah', 'Ruth')
 
 all_books = tuple(T.sectionFromNode(b)[0] for b in F.otype.s('book')) # use T to get english names
 
